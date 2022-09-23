@@ -1,0 +1,66 @@
+body {
+    background-color: black;
+}
+
+.navbar navbar-dark bg-dark fixed-top{
+    margin: 1rem;
+}
+
+.btndark {
+    margin-top: 5rem;
+    text-align: center;
+    size: 10rem;
+}
+
+.progress {
+    height: 30px;
+    margin-left: inherit;
+    margin-right: inherit;
+    margin-top: 2rem;
+    background-color: white;
+    position: relative;
+    display: block;
+    
+}
+
+.progress .progress-bar {
+    position: absolute;
+    height: 100%;
+    background-color: green;
+    animation: progress-animation 2s;
+    text-align: center;
+    color: black;
+    animation-fill-mode: forwards;
+    display: block;
+}
+
+@keyframes progress-animation {
+    0% {width: 0%;}
+    100% {width: 100%;}
+}
+
+.welcome {
+    color: white;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 200%;
+    animation: floating 2s infinite;
+    display: none;
+    margin-left: inherit;
+    margin-right: inherit;
+}
+
+.welcome:hover span {
+    display: none
+  }
+  
+.welcome:hover:before {
+    content: "Don't touch!";
+    color:red;
+    font-size: 10px;
+  }
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 20px); }
+    100%   { transform: translate(0, -0px); }   
+}
