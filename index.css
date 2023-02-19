@@ -1,83 +1,157 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
 body {
-    background-color: black;
-}
-#anchor {
-    position: absolute;
-    max-width: 200px;
-    max-height: 200px;
-    top: 100%;
-    left: 42%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #29b982;
+    background-color: #333;
 }
 
-#eyes, #eyes img {
-    text-align: center;
-    max-width: 100px;
-    max-height: 100px;
-    top: 103.5%;
-    right: 49.5%;
-    position: absolute;
+a {
+    color: #34db93;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 80px; /* adjust the height of the navbar */
+  background-color: rgb(28, 28, 28);
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.logo img {
+  height: 60%; /* adjust the logo height as a percentage of the navbar height */
+  max-width: 100%; /* ensure the logo doesn't overflow its container */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__link {
+  margin-left: 20px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
     display: block;
+    padding: 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
 }
 
-.navbar navbar-dark bg-dark fixed-top{
-    margin: 1rem;
+nav ul li a:hover {
+    background-color: #34db93;
+    color: #333;
 }
 
-.btndark {
-    margin-top: 5rem;
-    text-align: center;
-    size: 10rem;
-}
-
-.progress {
-    height: 30px;
-    margin-left: inherit;
-    margin-right: inherit;
+/* Main Styles */
+main {
     margin-top: 2rem;
-    background-color: white;
-    position: relative;
-    display: block;
-    
+    padding: 2rem;
 }
 
-.progress .progress-bar {
-    position: absolute;
-    height: 100%;
-    background-color: green;
-    animation: progress-animation 2s;
+section {
+    margin-bottom: 2rem;
+}
+
+h1, h2 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+    margin-left: 1rem;
+}
+
+ul li {
+    margin-bottom: 0.5rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #34db93;
+    color: #000000;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #29b982;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgb(28, 27, 27);
+    color: #29b982;
+    padding: 2rem;
     text-align: center;
-    color: black;
-    animation-fill-mode: forwards;
-    display: block;
 }
 
-@keyframes progress-animation {
-    0% {width: 0%;}
-    100% {width: 100%;}
+button#dark-mode-toggle {
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.welcome {
-    color: white;
-    text-align: center;
-    padding-top: 1rem;
-    font-size: 200%;
-    animation: floating 2s infinite;
-    display: none;
-    margin-left: inherit;
-    margin-right: inherit;
+.dark-mode {
+  background-color: #fff;
+  color: #333;
 }
 
-.welcome:hover span {
-    display: none
-  }
-  
-.welcome:hover:before {
-    content: "Don't touch!";
-    color:red;
-    font-size: 10px;
-  }
-@keyframes floating {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 20px); }
-    100%   { transform: translate(0, -0px); }   
+.dark-mode-header {
+  background-color: rgb(41, 41, 41);
+  color: #29b982;
+}
+
+.dark-mode-footer {
+  background-color: rgb(41, 41, 41);
+  color: #29b982;
+}
+progress {
+  background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #29b982;
+    border-radius: 0px 10px 10px 0px;
+}
+
+progress::-moz-progress-bar {
+  background-color: #29b982;
+    border-radius: 0px 10px 10px 0px;
 }

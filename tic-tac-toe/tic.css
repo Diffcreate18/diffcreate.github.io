@@ -1,0 +1,56 @@
+body {
+    background-color: #333;
+}
+
+.board {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+    margin-left: 300px;
+    margin-right: 300px;
+    height: 400px;
+
+}
+
+.cell {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    height: 100px;
+	font-size: 60px;
+	font-weight: bold;
+	color: #29b982;
+	background-color: #333;
+	border: 2px solid #29b982;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.cell:hover {
+	background-color: #202020;
+}
+
+.message {
+	margin: 10px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #29b982;
+	text-align: center;
+}
+
+.restart-btn {
+	padding: 10px 20px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #29b982;
+	background-color: #333;
+    border: 2px solid #29b982;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.restart-btn:hover {
+	background-color: #444;
+}
